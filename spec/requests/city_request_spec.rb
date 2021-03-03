@@ -22,4 +22,19 @@ RSpec.describe 'city request' do
       expect(response[:data][:attributes].keys).to match_array(%i[name state])
     end
   end
+
+  it 'returns an error if there is no response from the external API' do
+    stub_request(:get, "https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit=1&location=39.7526184-105.0249216&minPopulation=300000&radius=100&types=CITY").to_return(status: 500)
+
+    get '/api/v1/city', {coordinates: '39.7526184-105.0249216'}
+
+    expect(last_response.status).to eq(404)
+    expect(last_response.header['Content-Type']).to eq('application/json')
+    response = JSON.parse(last_response.body, symbolize_names: true)
+
+    expect(response).to be_a Hash
+    check_hash_structure(response, :errors, Array)
+    expect(response[:errors][0]).to eq('the request could not be completed')
+    expect(response[:errors][1]).to eq('external Cities API unavailable')
+  end
 end
