@@ -1,11 +1,11 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe 'city request' do
   it 'returns a JSON response with the name of the nearest large city' do
     VCR.use_cassette('denver') do
-      get '/api/v1/city', params: {coordinates: '39.7526184-105.0249216'}
+      get '/api/v1/city', {coordinates: '39.7526184-105.0249216'}
 
-      expect(last_response).to eq 200
+      expect(last_response.status).to eq 200
       expect(last_response.header['Content-Type']).to eq('application/json')
       response = JSON.parse(last_response.body, symbolize_names: true)
 
