@@ -1,0 +1,12 @@
+language: ruby
+rbenv:
+- 2.5.3
+before_install:
+- gem install bundler
+script:
+- bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure:
+  app: go-local-cities-api
