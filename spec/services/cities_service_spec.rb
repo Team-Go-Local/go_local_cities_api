@@ -35,4 +35,17 @@ RSpec.describe CitiesService do
       expect(city[:regionCode]).to eq("LA")
     end
   end
+
+  it 'can return no results' do
+    VCR.use_cassette('rutland') do
+      sleep(1) #API has a 1 request per second limit
+      coordinates = '43.6065-72.9794'
+
+      city_info = CitiesService.city_search(coordinates)
+
+      expect(city_info).to be_a(Hash)
+      check_hash_structure(city_info, :data, Array)
+      expect(city_info[:data]).to be_empty
+    end
+  end
 end

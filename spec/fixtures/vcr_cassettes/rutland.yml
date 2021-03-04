@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit=1&location=43.6065-72.9794&minPopulation=300000&radius=100&types=CITY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Rapidapi-Key:
+      - "<CITIES_API_KEY>"
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Thu, 04 Mar 2021 01:11:14 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Referrer-Policy:
+      - no-referrer
+      Server:
+      - RapidAPI-1.2.7
+      Vary:
+      - Access-Control-Request-Headers
+      - Access-Control-Request-Method
+      - Origin
+      Via:
+      - 1.1 google
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Rapidapi-Region:
+      - AWS - us-west-2
+      X-Rapidapi-Version:
+      - 1.2.7
+      X-Ratelimit-Requests-Limit:
+      - '1000'
+      X-Ratelimit-Requests-Remaining:
+      - '975'
+      X-Ratelimit-Requests-Reset:
+      - '9003'
+      X-Xss-Protection:
+      - 1 ; mode=block
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"metadata":{"currentOffset":0,"totalCount":0}}'
+  recorded_at: Thu, 04 Mar 2021 01:11:14 GMT
+recorded_with: VCR 6.0.0
