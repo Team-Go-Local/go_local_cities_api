@@ -32,7 +32,7 @@ This portion of the application exposes one endpoint to be consumed by our backe
 - `GET /api/v1/city`: finds the nearest with a population of at least 300,000 people to a destination selected by our users, which can then be used to browse and organize search results.<br>
 
   - required parameters: `coordinates` (latitude/longitude in ISO-6709 format: ±DD.DDDD±DDD.DDDD)
-  - example query: http://go-local-cities-api/api/v1/city?coordinates=39.7526184-105.0249216
+  - example query: http://go-local-cities-api.herokuapp.com/api/v1/city?coordinates=39.7526184-105.0249216
   - example response:
   ```
   {
