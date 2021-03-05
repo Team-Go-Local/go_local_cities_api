@@ -9,7 +9,6 @@
 -   [API Contract](#api-contract)
 -   [Technologies Used](#technologies-used)
 -   [Local Setup](#local-setup)
--   [Running the Tests](#running-the-tests)
 -   [Learning Goals](#learning-goals)
 -   [Authors](#authors)
 -   [Statistics](#statistics)
@@ -23,7 +22,7 @@ Go Local allows travelers to experience their destinations like a local by invit
 
 This repository houses the Sinatra Cities microservice.
 
-##### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
+#### To view the deployed application, please visit [Go Local](https://go-local-fe.herokuapp.com) on Heroku
 
 ## API Contract
 
@@ -97,8 +96,8 @@ To use the project in your local environment, please follow the instructions bel
 -   Isabelle Villasenor | [github](https://github.com/isabellevillasenor) \| [linkedin](https://www.linkedin.com/in/isabelle-villasenor/)
 -   Saundra Catalina | [github](https://github.com/saundracatalina) \| [linkedin](https://www.linkedin.com/in/saundra-catalina/)
 -   Sam Yeo | [github](https://github.com/SK-Sam) \| [linkedin](https://www.linkedin.com/in/samuel-horishin-yeo/)
--   V Arruda | [github](https://github.com/nessarruda) \| [linkedin](https://www.linkedin.com/in/vanessa-alves-de-arruda/)
--   Yesi Meza | [github](https://github.com/SK-Sam) \| [linkedin](https://www.linkedin.com/in/yesimeza/)
+-   V Arruda | [github](https://github.com/nessaarruda) \| [linkedin](https://www.linkedin.com/in/vanessa-alves-de-arruda/)
+-   Yesi Meza | [github](https://github.com/Yesi-MC) \| [linkedin](https://www.linkedin.com/in/yesimeza/)
 
 ## Statistics
 <!-- Shields -->
